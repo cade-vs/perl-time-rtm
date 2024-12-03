@@ -13,7 +13,7 @@ use strict;
 use Carp;
 use Time::RTM::Scope;
 
-our $VERSION = '1.12';
+our $VERSION = '1.14';
 
 our %ATTRS =  (
               log             => 1,

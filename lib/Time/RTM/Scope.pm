@@ -13,7 +13,7 @@ use strict;
 use Time::HiRes;
 use Carp;
 
-our $VERSION = '1.12';
+our $VERSION = '1.14';
 
 ##############################################################################
 
@@ -49,12 +49,16 @@ sub restart
 # TODO: pause() cont()
 sub split_str
 {
+  my $self = shift;
+  
   return "n/a/n" unless $self->{ 'START' };
   return $self->{ 'START' } . "/" . Time::HiRes::time() . "/" . (Time::HiRes::time() - $self->{ 'START' });
 }
 
 sub split
 {
+  my $self = shift;
+  
   return undef unless $self->{ 'START' };
   return Time::HiRes::time() - $self->{ 'START' };
 }

@@ -20,7 +20,7 @@ our @EXPORT = qw(
                   print_report_from_file
                 );
 
-our $VERSION = '1.12';
+our $VERSION = '1.14';
 our $DEBUG;
 
 ##############################################################################
