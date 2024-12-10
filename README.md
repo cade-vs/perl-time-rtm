@@ -22,7 +22,12 @@ Time::RTM - Run-time metrics stats
     
     # $_r can be restarted with new stats:
     $_r->restart();
-    
+
+    # if keys/name of the scope is not available upon begin_scope() it may be
+    # set later with:
+    $_r->set_keys( "PROCESSING/MESSAGE/$msg_id" );
+    # because $msg_id may be not known at the beginning of the scope, but
+    # figured out of the incoming data later in the scope...
     
     # to write down currently recorded stats to the logfile:
     $rtm->save();
